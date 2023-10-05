@@ -1,0 +1,26 @@
+#include <stdio.h>
+// Operadores Aritméticos: Soma (+), Subtração (-), Divisão (/), Multiplicação
+// (*) e Módulo (%) Atenção a ordem de procedência
+
+main() {
+  // Passo 1 - Declarar variáveis 
+  float base, altura, area;
+  
+  // Passo 2 - Recebe dados
+  // Boas vindas
+  printf("Bem vindo(a) a nossa calculadora de área! Lembre-se de colocar todos os valores em metros. \n\n");
+
+  // Base
+  printf("Digite o tamanho da base da sala: \n");
+  scanf("%f", &base);
+
+  // Altura
+  printf("Digite a altura da sala: \n");
+  scanf("%f", &altura);
+  
+  // Passo 3 - Montar a operação de processamento (Cálculo)
+  area = base * altura;
+  
+  // Passo 4 - Apresenta a saída
+  printf("\nA área dessa sala é de: %.2f m", area);
+}

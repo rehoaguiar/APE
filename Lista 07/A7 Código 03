@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+main(){
+  // Declarando a variável
+  int num, numImpar = 1;
+  
+  printf("Qual é o valor do número escolhido? ");
+  scanf("%d", &num);
+  
+  // While
+  while(num > 0){
+    printf("%d\n", numImpar);
+    numImpar += 2;
+    num -= 2;
+  }
+}

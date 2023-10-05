@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <math.h>
+
+main() {
+  // Declarar variáveis  
+  float salarioAtual, salarioFinal;
+  int tempoServico;
+  
+  // Receber Dados
+  printf("Qual o seu salário? ");
+  scanf("%f", &salarioAtual);
+
+  printf("Digite a quantidade de anos que trabalhou: ");
+  scanf("%d", &tempoServico);
+
+  // Cálculo
+  
+  // If... Else...
+  if (salarioAtual < 500 && tempoServico < 1){
+    salarioFinal = salarioAtual + (salarioAtual * 0.25);
+    printf("Seu salário será R$%.2f após sofrer um reajuste de 25%%, porém você não está apto para receber um bônus", salarioFinal);
+  }else if (salarioAtual <= 1000 && tempoServico >= 1 && tempoServico < 3){
+    salarioFinal = salarioAtual + (salarioAtual * 0.20) + 100;
+    printf("Seu salário será R$%.2f após sofrer um reajuste de 20%%, além de um bônus de R$100,00", salarioFinal);
+  }else if (salarioAtual <= 1500 && tempoServico >= 4 && tempoServico < 6){
+    salarioFinal = salarioAtual + (salarioAtual * 0.15) + 200;
+    printf("Seu salário será R$%.2f após sofrer um reajuste de 15%%, além de um bônus de R$200,00", salarioFinal);
+  }else if (salarioAtual <= 2000 && tempoServico >= 7 && tempoServico < 10){
+    salarioFinal = salarioAtual + (salarioAtual * 0.10) + 300;
+    printf("Seu salário será R$%.2f após sofrer um reajuste de 15%%, além de um bônus de R$300,00", salarioFinal);
+  }else if (salarioAtual >= 2000 && tempoServico >= 10){
+    salarioFinal = salarioAtual + 500;
+    printf("Seu salário é de R$%.2f não sofrerá um reajuste, porém você recebeu um bônus de R$500,00", salarioFinal);
+  }else{
+    printf("Erro!!");
+  }
+}

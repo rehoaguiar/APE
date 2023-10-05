@@ -1,0 +1,33 @@
+#include <stdio.h>
+// Operadores Aritméticos: Soma (+), Subtração (-), Divisão (/), Multiplicação
+// (*) e Módulo (%) Atenção a ordem de procedência
+
+main() {
+  // Passo 1 - Declarar variáveis 
+  int num1, num2, resultadoSoma, resultadoSub, resultadoMult;
+  float resultadoDiv;
+  
+  // Passo 2 - Recebe dados
+  // Primeiro Número
+  printf("Digite o primeiro número: \n");
+  scanf("%d", &num1);
+
+  // Segundo Número
+  printf("\nDigite o segundo número: \n");
+  scanf("%d", &num2);
+  
+  // Passo 3 - Montar a operação de processamento (Cálculo)
+  resultadoSoma = num1 + num2;
+  resultadoSub = num1 - num2;
+  resultadoMult = num1 * num2;
+  resultadoDiv = (float)num1 / num2;
+  
+  // Passo 4 - Apresenta a saída
+  printf("\nA soma é: %d", resultadoSoma);
+  printf("\nA subtração é: %d", resultadoSub);
+  printf("\nA multiplicação é: %d", resultadoMult);
+  printf("\nA divisão é: %.2f", resultadoDiv);
+
+  // Verificar saídas das operações da divisão e substração
+  // Caso necessário realizar casting, ou seja, mudançpa de tipo para a apresentação dos dados corretamente
+}

@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+main() {
+  int ddd;
+
+  printf("Qual ddd você deseja descobrir a origem? ");
+  scanf("%d", &ddd);
+  
+  switch(ddd) {
+    case 61:
+      printf("Esse ddd é proveniente de Brasília");
+      break;
+  
+    case 71:
+      printf("Esse ddd é proveniente de Salvador");
+      break;
+    
+    case 19:
+      printf("Esse ddd é proveniente de Campinas");
+      break;
+    
+    case 11:
+      printf("Esse ddd é proveniente de São Paulo");
+      break;
+    
+    case 21:
+      printf("Esse ddd é proveniente de Rio de Janeiro");
+      break;
+      
+    case 32:
+      printf("Esse ddd é proveniente de Juiz de Fora");
+      break;
+      
+    case 27:
+      printf("Esse ddd é proveniente de Vitória");
+      break;
+      
+    case 31:
+      printf("Esse ddd é proveniente de Belo Horizonte");
+      break;
+      
+    default:
+      printf("Nosso algaritmo não possui o ddd assim em nosso banco de dados");
+      break;
+  }
+}

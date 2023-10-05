@@ -1,0 +1,18 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+main() {
+  // Declarando as variáveis
+  float chico = 1.5, ze = 1.1;
+  int ano = 0;
+
+  // While
+  while (chico >= ze){
+    chico += 0.02;
+    ze += 0.03;
+    ano++;
+    printf("Chico mediu: %.2f e Zé: %.2f no %dº ano\n", chico, ze, ano);
+  }
+  printf("\nSerão necessários %d anos para Zé ficar maior que Chico!\n\n", ano);
+}

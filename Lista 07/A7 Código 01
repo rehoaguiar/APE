@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+main(){
+  // Declarando a variável
+  int num, contador = 0;
+  
+  printf("Qual é o valor do número escolhido? ");
+  scanf("%d", &num);
+  
+  // While
+  while(contador <= num){
+    printf("%d\n", contador);
+    contador++;
+  }
+}

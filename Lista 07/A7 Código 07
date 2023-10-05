@@ -1,0 +1,72 @@
+#include <stdio.h>
+
+int main() {
+  char sexo, corOlhos, corCabelos;
+  int idade;
+  float salario, porcentagem;
+  int totalHabitantes = 0, porcentagemMulheres = 0;
+
+  while (1) {
+    printf("\nInforme o sexo (F/f para feminino, M/m para masculino): ");
+    scanf(" %c", &sexo);
+
+    // Verifica se o usuário deseja encerrar a pesquisa
+    if (sexo == 'F' || sexo == 'f' || sexo == 'M' || sexo == 'm') {
+      printf("Informe a idade (entre 10 e 100 anos, ou -1 para encerrar): ");
+      scanf("%d", &idade);
+    }
+
+    if (idade == -1) {
+      break;
+    }
+
+    if ((sexo != 'F' && sexo != 'f' && sexo != 'M' && sexo != 'm') || (idade < 10 || idade > 100)) {
+      printf("Entrada inválida. Verifique o sexo (F/f ou M/m) e a idade (entre 10 e 100 anos).\n");
+      continue;
+    }
+    
+    if (idade < 10 || idade > 100) {
+      printf("Idade fora do intervalo válido. Informe uma idade entre 10 e 100 anos.\n");
+      continue;
+    } 
+
+    printf("Informe a cor dos olhos (A/a para azuis, V/v para verdes, C/c para castanhos, P/p para pretos): ");
+    scanf(" %c", &corOlhos);
+
+    if (corOlhos != 'A' && corOlhos != 'a' && corOlhos != 'V' && corOlhos != 'v' && corOlhos != 'C' && corOlhos != 'c' && corOlhos != 'P' && corOlhos != 'p') {
+      printf("Cor dos olhos inválida. Informe 'A/a' para azuis, 'V/v' para verdes, 'C/c' para castanhos e 'P/p' para pretos.\n");
+      continue;
+    }
+
+    printf("Informe a cor dos cabelos (L/l para loiros, C/c para castanhos, P/p para pretos, R/r para ruivos): ");
+    scanf(" %c", &corCabelos);
+
+    if (corCabelos != 'L' && corCabelos != 'l' && corCabelos != 'C' && corCabelos != 'c' && corCabelos != 'P' && corCabelos != 'p' && corCabelos != 'R' && corCabelos != 'r') {
+      printf("Cor dos cabelos inválida. Informe 'L/l' para loiro, 'C/c' para castanho, 'P/p' para pretos e 'R/r' para ruivos.\n");
+      continue;
+    }
+
+    printf("Informe o valor do salário: ");
+    scanf(" %f", &salario);
+
+    if (salario < 0) {
+      printf("Salário inválido. Não são permitidos valores negativos.\n");
+      continue;
+    }
+
+    totalHabitantes++;
+
+    // Indivíduos do sexo feminino, com idade entre 18 e 35 anos, olhos castanhos e cabelos castanhos
+    if (sexo == 'F' || sexo == 'f' && idade >= 18 && idade <= 35 && (corOlhos == 'C' || corOlhos == 'c') && (corCabelos == 'C' || corCabelos == 'c')) {
+      porcentagemMulheres++;
+    }
+  }
+    
+  if (totalHabitantes > 0) {
+    porcentagem = (porcentagemMulheres / totalHabitantes) * 100;
+    printf("A porcentagem de mulheres com idade entre 18 e 35 anos, olhos castanhos e cabelos castanhos é igual a %.2f%%\n", porcentagem);
+  } else {
+    printf("Nenhum habitante foi cadastrado.\n");
+  }
+  return 0;
+}

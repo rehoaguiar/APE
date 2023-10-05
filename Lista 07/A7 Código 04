@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+main(){
+  // Declarando as variáveis
+  int contador = 1, multiplos = 1;
+
+  // Imprimindo texto
+  printf("Os 5 números múltiplos de 3 são: ");
+  
+  // While e If
+  while (contador <= 5){
+    if (multiplos % 3 == 0){
+      
+      printf("%d ", multiplos);
+      contador ++;
+    }
+    multiplos ++;
+  }  
+}

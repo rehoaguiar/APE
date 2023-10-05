@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+
+main() {
+  // Declarar variáveis  
+  float num, raiz, quadrado;
+  
+  // Receber Dados
+  printf("Digite um número: ");
+  scanf("%f", &num);
+
+  // Cálculo
+  raiz = sqrt(num);
+  quadrado = pow(num, 2);
+  
+  // If... Else...
+  if (num >= 0){
+    printf("A raiz quadrada do número %.2f é: %.2f", num, raiz);
+  }else{
+    printf("O quadrado do número %.2f é: %.2f", num, quadrado);
+  }
+}

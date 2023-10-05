@@ -1,0 +1,112 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+main() {
+  int prato, sobremesa, bebida, caloriasPrato, caloriasSobremesa, caloriasBebida, caloriasTotais;
+  
+  printf("Digite o número do prato que você irá comer: ");
+  scanf("%d", &prato);
+
+  printf("Digite o número da sobremesa que você irá comer: ");
+  scanf("%d", &sobremesa);
+
+  printf("Digite o número da bebida que você irá beber: ");
+  scanf("%d", &bebida);
+  // Switch
+  
+  switch(prato) {
+    case 1:
+      printf("\nVocê irá comer um prato vegetariano");
+      caloriasPrato = 180;
+      printf("\nEsse prato contém %d calorias\n", caloriasPrato);
+      break;
+  
+    case 2:
+      printf("\nVocê irá comer um prato com peixe");
+      caloriasPrato = 230;
+      printf("\nEsse prato contém %d calorias\n", caloriasPrato);
+      break;
+    
+    case 3:
+      printf("\nVocê irá comer um prato com frango");
+      caloriasPrato = 250;
+      printf("\nEsse prato contém %d calorias\n", caloriasPrato);
+      break;
+    
+    case 4:
+      printf("\nVocê irá comer um prato com carne");
+      caloriasPrato = 350;
+      printf("\nEsse prato contém %d calorias\n", caloriasPrato);
+      break;
+      
+    default:
+      printf("\nNão existe nenhum prato cadastrado nesse número!\n");
+      break;
+  }
+
+  switch(sobremesa) {
+    case 1:
+      printf("\nVocê irá comer de sobremesa um abacaxi");
+      caloriasSobremesa = 75;
+      printf("\nEssa sobremesa contém %d calorias\n", caloriasSobremesa);
+      break;
+  
+    case 2:
+      printf("\nVocê irá comer de sobremesa um sorvete diet");
+      caloriasSobremesa = 110;
+      printf("\nEssa sobremesa contém %d calorias\n", caloriasSobremesa);
+      break;
+    
+    case 3:
+      printf("\nVocê irá comer de sobremesa um mouse diet");
+      caloriasSobremesa = 170;
+      printf("\nEssa sobremesa contém %d calorias\n", caloriasSobremesa);
+      break;
+    
+    case 4:
+      printf("\nVocê irá comer de sobremesa um mouse de chocolate");
+      caloriasSobremesa = 200;
+      printf("\nEssa sobremesa contém %d calorias\n", caloriasSobremesa);
+      break;
+      
+    default:
+      printf("\nNão existe nenhuma sobremesa cadastrada nesse número!");
+      break;
+  }
+
+  switch(bebida) {
+    case 1:
+      printf("\nVocê irá beber um chá");
+      caloriasBebida = 20;
+      printf("\nEssa bebida contém %d calorias\n", caloriasBebida);
+      break;
+  
+    case 2:
+      printf("\nVocê irá beber um suco de laranja");
+      caloriasBebida = 70;
+      printf("\nEssa bebida contém %d calorias\n", caloriasBebida);
+      break;
+    
+    case 3:
+      printf("\nVocê irá beber um suco de melão");
+      caloriasBebida = 100;
+      printf("\nEssa bebida contém %d calorias\n", caloriasBebida);
+      break;
+    
+    case 4:
+      printf("\nVocê irá beber um refrigerante diet");
+      caloriasBebida = 65;
+      printf("\nEssa bebida contém %d calorias\n", caloriasBebida);
+      break;
+      
+    default:
+      printf("\nNão existe nenhuma bebida cadastrada nesse número!");
+      break;
+  }
+
+  // Cálculo
+  caloriasTotais = caloriasPrato + caloriasSobremesa + caloriasBebida;
+
+  // Saída de informações
+  printf("\nA sua refeição de hoje terá %d calorias", caloriasTotais);
+}

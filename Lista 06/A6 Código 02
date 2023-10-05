@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+main() {
+  int codigo, quantidade;
+  float preco;
+  
+  printf("Digite o código do lanche que você gostaria de pedir: ");
+  scanf("%d", &codigo);
+
+  printf("\nDigite a quantidade que você gostaria de pedir: ");
+  scanf("%d", &quantidade);
+
+  // Switch
+  
+  switch(codigo) {
+    case 100:
+      printf("\nVocê solicitou %d Cachorro Quente(s)", quantidade);
+      preco = 10.10 * quantidade;
+      printf("\nTotal a pagar: R$%.2f", preco);
+      break;
+  
+    case 101:
+      printf("\nVocê solicitou %d Bauru(s) Simples", quantidade);
+      preco = 8.30 * quantidade;
+      printf("\nTotal a pagar: R$%.2f", preco);
+      break;
+    
+    case 102:
+      printf("\nVocê solicitou %d Bauru(s) com Ovo", quantidade);
+      preco = 8.50 * quantidade;
+      printf("\nTotal a pagar: R$%.2f", preco);
+      break;
+    
+    case 103:
+      printf("\nVocê solicitou %d Hamburguer(s)", quantidade);
+      preco = 12.50 * quantidade;
+      printf("\nTotal a pagar: R$%.2f", preco);
+
+      break;
+    
+    case 104:
+      printf("\nVocê solicitou %d Cheeseburguer(s)", quantidade);
+      preco = 13.25 * quantidade;
+      printf("\nTotal a pagar: R$%.2f", preco);
+      break;
+      
+    default:
+      printf("\nNão existe nenhum lanche com esse código!");
+      break;
+  }
+}

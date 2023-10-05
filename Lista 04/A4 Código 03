@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <math.h>
+
+main() {
+  // Declarar variáveis  
+  float a, b, c, num1, num2, num3;
+  
+  // Receber Dados
+  printf("Digite um número para A: ");
+  scanf("%f", &a);
+
+  printf("\nDigite um número para B: ");
+  scanf("%f", &b);
+
+  printf("\nDigite um número para C: ");
+  scanf("%f", &c);
+  
+  // If... Else... (Maior)
+  if (a > b && a > c){
+    num1 = a;
+  }else if (b > c){
+    num1 = b;
+  }else{
+    num1 = c;
+  }
+  
+  // If... Else... (Menor)
+  if (a < b && a < c){
+    num3 = a;
+  }else if (b < c){
+    num3 = b;
+  }else{
+    num3 = c;
+  }
+
+  // If... Else... (Intermediário)
+  if (a < num1 && a > num3){
+    num2 = a;
+  }else if (b < num1 && b > num3){
+    num2 = b;
+  }else{
+    num2 = c;
+  }
+  
+  printf("\nOs números em ordem crescente: %.2f, %.2f, %.2f\n", num3, num2, num1);
+}

@@ -1,0 +1,25 @@
+#include <stdio.h>
+// Operadores Aritméticos: Soma (+), Subtração (-), Divisão (/), Multiplicação
+// (*) e Módulo (%) Atenção a ordem de procedência
+
+main() {
+  // Passo 1 - Declarar variáveis 
+  float salario, reajuste, valorAjustado, porcentagem;
+  
+  // Passo 2 - Recebe dados
+  fflush(stdin);
+  printf("Quanto é o seu salário? \n");
+  scanf("%f", &salario);
+
+  fflush(stdin);
+  printf("Qual é o percentual do seu reajuste? \n");
+  scanf("%f", &reajuste);
+
+  // Passo 3 - Montar a operação de processamento (Cálculo)
+  porcentagem = (reajuste / 100) * salario;
+  valorAjustado = porcentagem + salario;
+  
+  // Passo 4 - Apresenta a saída
+  fflush(stdin);
+  printf("\nO seu salário ajustado é: %.2f reais", valorAjustado);
+}

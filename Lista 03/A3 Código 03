@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+main() {
+  // Declarar variáveis  
+  // Salário mínimo referente ao dia 24/08/2023 às 10:13
+  float altura;
+  float alturaPadrao = 1.8;
+  
+  // Estrutura de decisão/seleção
+  printf("Qual é a sua altura? ");
+  scanf("%f", &altura);
+
+  if (altura > alturaPadrao){
+    printf("\nVocê mede mais do que 1.80 metros");
+  }else if (altura == alturaPadrao){
+    printf("\nVocê mede 1.80 metros");
+  }else{
+    printf("\nVocê mede menos do que 1.80 metros");
+  }

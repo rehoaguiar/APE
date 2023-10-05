@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+main(){
+  // Declarando as variáveis
+  int contador = 0, numeros = 2, soma = 0;
+  
+  // While e If
+  while (contador < 50){
+    soma += numeros;
+    numeros += 2;
+    contador++;
+  }  
+  printf("A soma dos 50 primeiros números pares é de: %d", soma);
+}

@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+main() {
+  // Declarar variáveis  
+  float notaProva1, notaProva2, notaProva3, notaFinal;
+  
+  // Receber Dados
+  printf("Digite a nota da primeira prova: ");
+  scanf("%f", &notaProva1);
+
+  printf("Digite a nota da segunda prova: ");
+  scanf("%f", &notaProva2);
+
+  printf("Digite a nota da terceira prova: ");
+  scanf("%f", &notaProva3);
+
+  // Cálculo
+  notaFinal = (notaProva1 + notaProva2 + (notaProva3 * 2))/4;
+  
+  // If... Else...
+  if (notaFinal >= 7){
+    printf("Parabéns, você foi aprovado!");
+  }else{
+    printf("Quem repete é papagaio e, aparentemente, você também! Infelizmente você foi reprovado!");
+  }
+}

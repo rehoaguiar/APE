@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <math.h>
+
+main() {
+  // Declarar variáveis  
+  float a, b, c, d;
+  
+  // Receber Dados
+  printf("Digite um número para A: ");
+  scanf("%f", &a);
+
+  printf("\nDigite um número para B: ");
+  scanf("%f", &b);
+
+  printf("\nDigite um número para C: ");
+  scanf("%f", &c);
+
+  printf("\nDigite um número para D: ");
+  scanf("%f", &d);
+
+  // Imprimir
+  printf("\n\nSendo o valor de A: %.2f", a);
+  printf("\nO valor de B: %.2f", b);
+  printf("\nO valor de C: %.2f", c);
+  printf("\nE o valor de D: %.2f", d);
+  
+  // If... Else... (Maior)
+  if (a > b && a > c && a > d){
+    printf("\n\nA será o maior e ");
+  }else if (b > c && b > d){
+    printf("\n\nB será o maior e ");
+  }else if (c > d){
+    printf("\n\nC será o maior e ");
+  }else{
+    printf("\n\nD será o maior e ");
+  }
+
+  // If... Else... (Menor)
+  if (a < b && a < c && a < d){
+    printf("A o menor");
+  }else if (b < c && b < d){
+    printf("B o menor");
+  }else if (c < d){
+    printf("C o menor");
+  }else{
+    printf("D o menor");
+  }
+}

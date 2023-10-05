@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+main() {
+  // Declarar variáveis  
+  double a, b, c, x1, x2, delta;
+  
+  // Receber Dados
+  printf("Qual é o valor de a? ");
+  scanf("%lf", &a);
+
+  printf("Qual é o valor de b? ");
+  scanf("%lf", &b);
+
+  printf("Qual é o valor de c? ");
+  scanf("%lf", &c);
+
+  // Cálculo
+  delta = pow(b, 2) - (4 * a * c);
+  x1 = ((-b) + sqrt(delta)) / (2 * a);
+  x2 = ((-b) - sqrt(delta)) / (2 * a);
+  
+  // If... Else...
+  if (a == 0){
+    printf("Não é uma equação de segundo grau!");
+  }else if (delta < 0){
+    printf("Não existe raiz!");
+  }else if (delta == 0){
+    printf("O valor da raiz única é %.2lf ", x1);
+  }else if (delta >= 0){
+    printf("X1 = %.2lf e X2 = %.2lf", x1, x2);
+  }else{}
+}

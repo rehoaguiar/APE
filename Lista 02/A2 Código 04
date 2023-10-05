@@ -1,0 +1,22 @@
+#include <stdio.h>
+// Operadores Aritméticos: Soma (+), Subtração (-), Divisão (/), Multiplicação
+// (*) e Módulo (%) Atenção a ordem de procedência
+
+main() {
+  // Passo 1 - Declarar variáveis 
+  float real, calculo;
+  
+  // Passo 2 - Recebe dados
+  // Notas da programadora
+  printf("Bem vindo(a)! Lembre-se que atualmente (16/08/2023 ás 20:21) o dólar está custando 4,99 \n\n");
+
+  // Valor em reais
+  printf("Digite o valor que deseja converter em reais: \n");
+  scanf("%f", &real);
+
+  // Passo 3 - Montar a operação de processamento (Cálculo)
+  calculo = real / 4.99;
+  
+  // Passo 4 - Apresenta a saída
+  printf("\n Ao convertermos, %.2f reais é o equivalente a %.2f dólares", real, calculo);
+}

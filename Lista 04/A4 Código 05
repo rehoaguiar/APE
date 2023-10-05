@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+
+main() {
+  // Declarar variáveis  
+  float num;
+  
+  // Receber Dados
+  printf("Digite um número: ");
+  scanf("%f", &num);
+  
+  // If... Else... (Maior)
+  if (num == 5 || num == 200 || num == 400){
+    printf("Esse número é igual a 5, 200 ou 400");
+  }else if (num >= 500 && num <= 1000){
+    printf("Esse número está entre 500 e 1000");
+  }else{
+    printf("Esse número não está dentro dos escopos pré-definidos desse algoritmo");
+  }
+}

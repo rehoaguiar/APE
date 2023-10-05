@@ -1,0 +1,29 @@
+#include <stdio.h>
+// Operadores Aritméticos: Soma (+), Subtração (-), Divisão (/), Multiplicação
+// (*) e Módulo (%) Atenção a ordem de procedência
+
+main() {
+  // Passo 1 - Declarar variáveis 
+  float mercadoria, frete, despesas, soma, valorVenda, lucro;
+  
+  // Passo 2 - Recebe dados
+  fflush(stdin);
+  printf("Qual o preço da mercadoria? \n");
+  scanf("%f", &mercadoria);
+
+  printf("\nQual o valor do frete? \n");
+  scanf("%f", &frete);
+    
+  printf("\nQual o valor das despesas? \n");
+  scanf("%f", &despesas);
+
+  printf("\nQual é o valor da venda? \n");
+  scanf("%f", &valorVenda);
+
+  // Passo 3 - Montar a operação de processamento (Cálculo)
+  soma = mercadoria + despesas + frete;
+  lucro = ((valorVenda - soma) / soma) * 100;
+  
+  // Passo 4 - Apresenta a saída
+  printf("\n A porcentagem do lucro obtido nessa venda foi de %.2f %%", lucro);
+}

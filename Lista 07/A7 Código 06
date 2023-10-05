@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+main(){
+  // Declarando as variáveis
+  int quantidade;
+  char escolha, opcao = 's';
+  double a = 5, m = 1, p = 4, total = 0, compraTotal = 0;
+
+  // Imprimindo texto
+  printf("Sendo:\n A -> Abacaxi\n M -> Maçã\n P -> Pêra\n");
+
+  // While e If
+  while (opcao == 's'){
+    printf("Escolha uma fruta (Abacaxi, Maçã ou Pêra) ou digite qualquer valor para finalizar a compra: ");
+    scanf(" %c", &escolha);
+    fflush(stdin);
+    
+    if (escolha == 'A' || escolha == 'a' || escolha == 'M' || escolha == 'm' || escolha == 'P' || escolha == 'p'){
+      printf("\nQual a quantidade desejada? ");
+      scanf("%d", &quantidade);
+      fflush(stdin);
+    
+      if (escolha == 'A' || escolha == 'a'){
+        total = a * quantidade;
+      } else if (escolha == 'M' || escolha == 'm') {
+        total = m * quantidade;
+      } else if (escolha == 'P' || escolha == 'p') {
+        total = p * quantidade;
+      }
+    } else {
+      printf("\nNão existe nenhuma fruta conhecida por %c.\nIrei encerrar a sua compra\n", escolha);
+    }
+
+    printf("\nO valor total do item compra é: %.2lf\n", total);
+    compraTotal += total;
+    printf("\nDeseja escolher outro item? ");
+    scanf("%c", &opcao);
+    fflush(stdin);
+  }
+  printf("\nO valor total da compra é: %.2lf\n", compraTotal);
+}

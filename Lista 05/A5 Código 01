@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+
+main() {
+  // Declarar variáveis  
+  int num;
+  
+  // Receber Dados
+  printf("Digite um número: ");
+  scanf("%i", &num);
+  
+  // If... Else...
+  if (num %2 == 0){
+    printf("Esse número é par");
+  }else{
+  }
+}

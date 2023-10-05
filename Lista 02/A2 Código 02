@@ -1,0 +1,18 @@
+#include <stdio.h>
+// Operadores Aritméticos: Soma (+), Subtração (-), Divisão (/), Multiplicação
+// (*) e Módulo (%) Atenção a ordem de procedência
+
+main() {
+  // Passo 1 - Declarar variáveis 
+  float num1, dobroNum;
+  
+  // Passo 2 - Recebe dados
+  printf("Digite um número: \n");
+  scanf("%f", &num1);
+  
+  // Passo 3 - Montar a operação de processamento (Cálculo)
+  dobroNum = num1 * 2;
+  
+  // Passo 4 - Apresenta a saída
+  printf("\nO dobro desse número é: %.2f", dobroNum);
+}

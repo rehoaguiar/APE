@@ -1,0 +1,27 @@
+#include <stdio.h>
+// Operadores Aritméticos: Soma (+), Subtração (-), Divisão (/), Multiplicação
+// (*) e Módulo (%) Atenção a ordem de procedência
+
+main() {
+  // Passo 1 - Declarar variáveis 
+  int anos, meses, dias, idadeDias;
+  
+  // Passo 2 - Recebe dados
+  fflush(stdin);
+  printf("Qual é sua idade em anos? \n");
+  scanf("%i", &anos);
+
+  fflush(stdin);
+  printf("Qual é sua idade em meses? \n");
+  scanf("%i", &meses);
+
+  fflush(stdin);
+  printf("Qual é sua idade em dias? \n");
+  scanf("%i", &dias);
+
+  // Passo 3 - Montar a operação de processamento (Cálculo)
+  idadeDias = (anos * 365) + (meses * 30) + dias;
+  
+  // Passo 4 - Apresenta a saída
+  printf("\nA sua idade em dias é %i", idadeDias);
+}

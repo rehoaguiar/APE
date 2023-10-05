@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <locale.h>
+#include <windows.h>
+
+int main(){
+    // Declaração de variáveis
+    char nome [50];
+    int idade;
+    char matricula [10];
+    char endereco [100];
+    char curso [30];
+    int periodo;
+    char disciplinas [500];
+
+    // Limpar o buffer
+    fflush(stdin);
+
+    // Adicionar caracteres especiais próprios do português
+    setlocale(LC_ALL, "Portuguese");
+    SetConsoleCP(1252);
+    SetConsoleOutputCP(1252);
+    
+    // Entrada de texto
+    // Nome
+    fflush(stdin);
+    printf("\nOlá, estudante. Qual é o seu nome? ");
+    scanf("%[^\n]", nome);
+   
+    // Boas-vindas
+    printf("\nOlá, %s! Seja bem-vindo(a) à Universidade Católica de Brasília, a sua UCB!\nVou precisar de mais algumas informações para concluir o seu cadastro, okay? ", nome);
+
+    // Idade
+    fflush(stdin);
+    printf("\n\nQual é a sua idade? ");
+    scanf("%d", &idade);
+    
+    // Matrícula
+    fflush(stdin);
+    printf("\nQual é o seu número de matrícula?  UC");
+    scanf("%s", matricula);
+
+    // Endereço
+    fflush(stdin);
+    printf("\nQual é o seu endereço?  ");
+    fgets(endereco, sizeof(endereco), stdin);
+
+    // Curso
+    printf("\nQual é o seu curso?  ");
+    scanf("%[^\n]", curso);
+
+    // Período
+    printf("\nEm qual período você está?  ");
+    scanf("%d", &periodo);
+    
+    // Disciplina
+    fflush(stdin);
+    printf("\nQuais disciplinas você está cursando?  ");
+    scanf("%[^\n]", disciplinas);
+
+    // Overhaul de informações
+    printf("\n %s, da matrícula UC%s, reside no endereço: %s, possui %d anos e está no %d° período de %s. Atualmente, está cursando a disciplina de %s.", nome, matricula, endereco, idade, periodo, curso, disciplinas);
+}
