@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+  // Declarando as variáveis
+  double x, y;
+
+  // Entrada de Dados
+  printf("Qual o valor do ponto x? ");
+  scanf("%lf", &x);
+
+  printf("Qual o valor do ponto y? ");
+  scanf("%lf", &y);
+  
+  // If
+  if (x == 0 && y == 0){
+    printf("\nO ponto (%.1lf, %.1lf) está localizado na Origem", x, y);
+  }else if (x == 0){
+    printf("\nO ponto (%.1lf, %.1lf) está localizado no Eixo Y", x, y);
+  }else if (y == 0){
+    printf("\nO ponto (%.1lf, %.1lf) está localizado no Eixo X", x, y);
+  }else if (x > 0 && y > 0){
+    printf("\nO ponto (%.1lf, %.1lf) está localizado no Quadrante 1", x, y);
+  }else if (x < 0.0 && y > 0.0){
+    printf("\nO ponto (%.1lf, %.1lf) está localizado no Quadrante 2", x, y);
+  }else if (x < 0 && y < 0){
+    printf("\nO ponto (%.1lf, %.1lf) está localizado no Quadrante 3", x, y);
+  } else {
+    printf("\nO ponto (%.1lf, %.1lf) está localizado no Quadrante 4", x, y);
+  }
+}
